@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Ubuntu;
+    font-weight: 700;
+    src: url(./assets/fonts/Ubuntu-Bold.ttf);
+  }
+  @font-face {
+    font-family: Ubuntu;
+    font-weight: 500;
+    src: url(./assets/fonts/Ubuntu-Medium.ttf);
+  }
+  @font-face {
+    display: grid;
+    font-family: Ubuntu;
+    font-weight: 400;
+    src: url(./assets/fonts/Ubuntu-Regular.ttf);
+  }
+  body {
+    font-family: "Ubuntu", system-ui, sans-serif;
+    @apply bg-magnolia;
+  }
+  @media screen and (min-width: 1024px) {
+    body {
+      display: grid;
+      height: 100svh;
+      place-content: center;
+    }
+  }
+
+  .holy-albatross {
+    display: flex;
+    flex-wrap: wrap;
+    --margin: 1rem;
+    --modifier: calc(40rem - 100%);
+    margin: calc(var(--margin) * -1);
+  }
+  .holy-albatross > * {
+    flex-grow: 1;
+    flex-basis: calc(var(--modifier) * 999);
+    margin: var(--margin);
+  }
+}
