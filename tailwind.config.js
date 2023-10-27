@@ -2,11 +2,6 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    backgroundImage: {
-      "sidebar-mobile": "url('./src/assets/images/bg-sidebar-mobile.svg')",
-      "sidebar-desktop": "url('./src/assets/images/bg-sidebar-desktop.svg')",
-			"checkmark": "url('./src/assets/images/icon-checkmark.svg')"
-    },
     colors: {
       "marine-blue": "hsl(213, 96%, 18%)",
       "purplish-blue": "hsl(243, 100%, 62%)",
@@ -19,7 +14,13 @@ export default {
       magnolia: "hsl(217, 100%, 97%)",
       white: "hsl(0, 0%, 100%)",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "sidebar-mobile": "url('/images/bg-sidebar-mobile.svg')",
+        "sidebar-desktop": "url('/images/bg-sidebar-desktop.svg')",
+        checkmark: "url('/images/icon-checkmark.svg')",
+      },
+    },
   },
   plugins: [],
 };
